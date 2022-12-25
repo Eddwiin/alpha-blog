@@ -3,4 +3,8 @@
 <%= link_to "Article listing", articles_path %>
 <%= link_to "About page", about_path %>
 
-<%= link_to "Sign up", signup_path %>
+<%= link_to "Sign up", signup_path %> <br />
+<%= link_to "Log out", logout_path, method: :delete %>
+ <% if logged_in? %> 
+ <%= link_to "Delete", user_path(current_user), method: :delete, data: { confirm: "Are you sure to delete ?" } %>
+ <% end %>
