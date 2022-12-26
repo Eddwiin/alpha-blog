@@ -58,4 +58,5 @@ class UsersController < ApplicationController
             flash[:alert] = "You can only update your account"
             redirect_to @user
         end
+    end
 end
